@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class IntroDetail extends StatefulWidget {
   const IntroDetail({super.key});
@@ -26,8 +27,8 @@ class _IntroDetailState extends State<IntroDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Giới thiệu'),
-        backgroundColor: Color(0xFFC07F00),
+        title: Text(AppLocalizations.of(context)!.introTitle),
+        backgroundColor: const Color(0xFFC07F00),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -80,42 +81,41 @@ class _IntroDetailState extends State<IntroDetail> {
               ),
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Hoàng thành Thăng Long',
-              style: TextStyle(
+            Text(AppLocalizations.of(context)!.introContent,
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFFC07F00),
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Hoàng thành Thăng Long là quần thể di tích gắn với lịch sử kinh thành Thăng Long Hà Nội. Công trình kiến trức đồ sộ này được các triều vua xây dựng trong nhiều giai đoạn lịch sử và trở thành di tích quan trọng bậc nhất trong hệ thống các di tích Việt Nam',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+            Text(
+              AppLocalizations.of(context)!.intro1,
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Chi tiết:',
-              style: TextStyle(
+            Text(
+              AppLocalizations.of(context)!.detail,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFFC07F00),
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Tháng 12/2002, các chuyên gia đã tiến hành khai quật trên tổng diện tích 19.000m2 tại trung tâm chính trị Ba Đình – Hà Nội. Cuộc khai quật khảo cổ học lớn nhất Việt Nam và của cả Đông Nam Á này đã phát lộ những dấu vết của Hoàng thành Thăng Long trong tiến trình lịch sử trải dài 13 thế kỷ với các di tích và tầng văn hóa chồng xếp lên nhau.',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+            Text(
+              AppLocalizations.of(context)!.intro2,
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Vào lúc 20 giờ 30 ngày 31/7/2010 theo giờ địa phương tạiBrasil, tức 6 giờ 30 ngày 1/8/2010 theo giờ Việt Nam, Ủy ban di sản thế giới đã thông qua Nghị quyết công nhận khu Trung tâm Hoàng thành Thăng Long – Hà Nội là Di sản Văn hóa thế giới. Đây là niềm tự hào của không chỉ của riêng Hà Nội mà còn của cả đất nước Việt Nam.',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+            Text(
+              AppLocalizations.of(context)!.intro3,
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Với những thông tin dữ liệu được cập nhật một cách hệ thống, đầy đủ, kịp thời, Ban biên tập website www.hoangthanhthanglong.vn mong muốn giúp cho độc giả, khách du lịch trong nước và nước ngoài và những ai quan tâm đến Di sản thế giới Hoàng thành Thăng Long hiểu thêm về những giá trị nổi bật toàn cầu của Di sản quý giá này.',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+            Text(
+              AppLocalizations.of(context)!.intro4,
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
           ],
         ),

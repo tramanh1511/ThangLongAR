@@ -15,11 +15,14 @@ dependencies:
   provider: ^6.1.2
   dots_indicator: ^3.0.0
   google_maps_flutter: ^2.6.1
-  geolocator: ^11.0.0
+  # geolocator: ^11.0.0
   http: ^1.2.1
   flutter_unity_widget: ^2022.2.1
-  # flutter_localization: ^0.2.0
-  # intl: ^0.18.1
+  webview_flutter: ^4.7.0
+  # flutter_polyline_points: ^2.0.0
+  # flutter_svg: ^2.0.10+1
+  # location: ^6.0.1
+  cupertino_icons: ^1.0.8
   flutter_localizations:
     sdk: flutter
   intl: any

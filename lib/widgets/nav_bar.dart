@@ -1,3 +1,5 @@
+import 'package:ar_app/ui/screens/map/controller.dart';
+import 'package:ar_app/ui/screens/map/webview.dart';
 import 'package:flutter/material.dart';
 // import 'package:ar_app/ui/screens/Home/home.dart';
 import 'package:ar_app/ui/screens/sample.dart';
@@ -19,17 +21,19 @@ class _NavBarState extends State<NavBar> {
     const HomeScreen(),
     const DestinationScreen(),
     const SampleScreen(),
-    const SampleScreen(),
+    const WebView(),
     const SampleScreen(),
   ];
 
-  final List<NavItem> _navItems = [
-    NavItem(icon: Icons.home, title: 'AppLocalizations.of(context)!.home'),
-    NavItem(icon: Icons.castle, title: 'AppLocalizations.of(context)!.destinations'),
-    NavItem(icon: Icons.photo_camera, title: 'AppLocalizations.of(context)!.camera'),
-    NavItem(icon: Icons.map, title: 'AppLocalizations.of(context)!.map'),
-    NavItem(icon: Icons.settings, title: 'AppLocalizations.of(context)!.settings'),
-  ];
+   List<NavItem> createNavItems(BuildContext context) {
+    return [
+      NavItem(icon: Icons.home, title: AppLocalizations.of(context)!.home),
+      NavItem(icon: Icons.castle, title: AppLocalizations.of(context)!.destinations),
+      NavItem(icon: Icons.photo_camera, title: AppLocalizations.of(context)!.camera),
+      NavItem(icon: Icons.map, title: AppLocalizations.of(context)!.map),
+      NavItem(icon: Icons.settings, title: AppLocalizations.of(context)!.settings),
+    ];
+   }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -39,6 +43,7 @@ class _NavBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
+    final navItems = createNavItems(context);
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
@@ -48,8 +53,8 @@ class _NavBarState extends State<NavBar> {
             padding: const EdgeInsets.only(top: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: _navItems.map((item) {
-                int index = _navItems.indexOf(item);
+              children: navItems.map((item) {
+                int index = navItems.indexOf(item);
                 return Expanded(
                   child: GestureDetector(
                     onTap: () => _onItemTapped(index),

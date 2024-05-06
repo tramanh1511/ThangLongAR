@@ -1,19 +1,21 @@
 import 'package:ar_app/ui/screens/Destination/destination_details.dart';
 import 'package:flutter/material.dart';
 import 'package:ar_app/model/destination/destinations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DestinationScreen extends StatelessWidget {
   const DestinationScreen({super.key});
-  static const routeName = '/home/destinations';
 
   @override
   Widget build(BuildContext context) {
+    final destinations = createDestinations(context);
+    
     return MaterialApp(
       title: 'destinations',
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFFC07F00),
-          title: const Text('Di tích'),
+          title: Text(AppLocalizations.of(context)!.destinations),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
@@ -42,7 +44,7 @@ class DestinationScreen extends StatelessWidget {
                   //   }
                   // },
                   decoration: InputDecoration(
-                    hintText: 'Tìm kiếm di tích',
+                    hintText: AppLocalizations.of(context)!.search ,
                     prefixIcon: const Icon(Icons.search),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -66,9 +68,9 @@ class DestinationScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      'Di tích tiêu biểu',
-                      style: TextStyle(
+                    Text(
+                      AppLocalizations.of(context)!.dest1,
+                      style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFFC07F00),

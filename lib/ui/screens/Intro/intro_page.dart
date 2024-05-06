@@ -1,7 +1,5 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:ar_app/widgets/nav_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
