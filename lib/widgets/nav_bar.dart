@@ -1,5 +1,6 @@
 import 'package:ar_app/ui/screens/map/controller.dart';
 import 'package:ar_app/ui/screens/map/webview.dart';
+import 'package:ar_app/ui/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
 // import 'package:ar_app/ui/screens/Home/home.dart';
 import 'package:ar_app/ui/screens/sample.dart';
@@ -21,8 +22,10 @@ class _NavBarState extends State<NavBar> {
     const HomeScreen(),
     const DestinationScreen(),
     const SampleScreen(),
-    const WebView(),
-    const SampleScreen(),
+    // const WebView(),
+    const WebViewContainer(),
+    const SettingsScreen(),
+    // const SampleScreen(),
   ];
 
    List<NavItem> createNavItems(BuildContext context) {
@@ -48,7 +51,7 @@ class _NavBarState extends State<NavBar> {
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
         child: SizedBox(
-          height: 20,
+          height: 10,
           child: Padding(
             padding: const EdgeInsets.only(top: 5),
             child: Row(
@@ -68,13 +71,15 @@ class _NavBarState extends State<NavBar> {
                               : Colors.grey,
                         ),
                         const SizedBox(height: 5),
-                        Text(
-                          item.title,
-                          style: TextStyle(
-                            color: _selectedIndex == index
-                                ? Theme.of(context).primaryColor
-                                : Colors.grey,
-                            fontWeight: FontWeight.w500,
+                        Flexible(
+                          child: Text(
+                            item.title,
+                            style: TextStyle(
+                              color: _selectedIndex == index
+                                  ? Theme.of(context).primaryColor
+                                  : Colors.grey,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ],

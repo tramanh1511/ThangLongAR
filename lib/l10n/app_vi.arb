@@ -5,9 +5,12 @@
     "home": "Trang chủ",
     "destinations": "Di tích",
     "camera": "Camera",
-    "map": "Bản đồ",
+    "map": "Trưng bày",
     "settings": "Cài đặt",
     "search": "Tìm kiếm di tích",
+    "language": "Ngôn ngữ",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
 
     "introTitle": "Giới thiệu",
     "introContent": "Hoàng thành Thăng Long là một quần thể kiến trúc khổng lồ được xây dựng bởi các triều đại liên tiếp suốt lịch sử và đã trở thành một trong những di tích quan trọng nhất trong hệ thống di tích của Việt Nam.",
